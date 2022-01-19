@@ -1,0 +1,246 @@
+@charset "utf-8"; 
+/* reset css */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, et
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+ /* 공통 css는 제일 위에 쓴다 */
+
+ img {
+     max-height: 100%;
+ }
+
+.productCont {
+    width: 1200px;
+}
+
+.blind {
+    position: absolute;
+    overflow: hidden;
+    width: 0;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+
+#appleGnb {
+    background-color:rgba(0,0,0,0.8);
+    position: absolute;
+    width: 100%;
+    position: relative;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.menu li a {
+    display:inline-block;
+    height:44px;
+    line-height:44px;
+    color:#fff;
+}
+
+.event-bnr p {
+    color: #1d1d1f;
+    text-align:center;
+    height: 46px;
+    line-height: 46px;
+}
+.event-bnr a {
+    color:#0066cc;
+}
+
+.headline {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1.17865;
+}
+
+.subhead {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.29167;
+}
+
+.links {
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 1.31579;
+    margin-top: 14px;
+}
+
+.link-more {
+    margin-right: 20px;
+}
+
+.cont-ipad {          
+    background:black url(../images/ipad_pro2.jpg) no-repeat 50% 0;
+
+    /*커버는 배경이미지를 중앙에 배치함*/
+    /*컨테인은 이미지사이즈의 세로를 100%, 가로를 auto로 하고 중앙에 배치함*/
+
+    background-size: cover;
+    
+    /* background-color:black;
+    background-image: url(../images/ipad_pro2.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 0; */
+    color:white;
+    text-align:center;
+}
+
+.cont-iphone12 {
+    
+    background: white url(../images/iphone_12_2.jpg) no-repeat 50% 0;
+    color:black;
+    text-align:center;
+    background-size: cover;
+}
+
+.cont-iphone12pro {
+    background:black url(../images/iphone_12_pro_2.jpg) no-repeat 50% 0;
+    color:white;
+    text-align:center;
+}
+
+
+/* 두줄짜리 콘텐츠*/
+
+.cont-imac {
+    float: left;
+    width:50%;
+    color:black;
+    background:white url(../images/imac_2.jpg) no-repeat 50% 0;
+    background-size: cover;
+}
+
+.cont-watch {
+    float: right;
+    width:50%;
+    color:white;
+    background:black url(../images/watch_2.jpg) no-repeat 50% 0;
+    background-size: cover;
+}
+
+.cont-music {
+    float: left;
+    width:50%;
+    color:white;
+    background:black url(../images/music.jpg) no-repeat 50% 0;
+    background-size: cover;
+}
+
+.cont-podcast {
+    float: right;
+    width:50%;
+    color:black;
+    background: white url(../images/podcast.jpg) no-repeat 50% 0;
+    background-size: cover;
+}
+
+.cont-airtag {
+    float: left;
+    width: 50%;
+    color: black;
+    background: white url(../images/air-tag.jpg) no-repeat 50% 0;
+    background-size: cover;
+}
+
+.cont-airpodspro {
+    float: right;
+    width: 50%;
+    color: white;
+    background: black url(../images/air-pot.jpg) no-repeat 50% 0;
+    background-size: cover;
+}
+
+/* box-sizing border-box는 박스 크기에 padding, border의 크기를 포함한다. */
+* {box-sizing: border-box;}
+
+
+/* div 테그중에  class 이름이  cont- 으로 시작하는 모든 요소인 경우  */
+div[class^="cont-"] {
+    height:700px;
+    text-align:center;
+    padding-top: 40px;
+}
+
+a.link-more {
+    color: #06c;
+    letter-spacing: inherit;
+}
+
+a.link-buy {
+    color: #06c;
+    letter-spacing: inherit;
+}
+
+#appleFoot {
+    padding: 200px;
+    line-height: 1.5em;
+}
+
+/* 푸터 좌우 여백을 주기위해 페딩값을 넣었는데. 애플 홈에서는 패딩값을 정확히 찾을수 없음. */
+
+.notice {
+    border-bottom: 1px solid #d2d2d7;
+    padding: 17px 0 11px;
+    color: #86868b;
+} 
+
+#footnote-1 {
+    font-size: 1em;
+}
+
+
+
+
+/* 
+div
+.class
+#id 
+*/
